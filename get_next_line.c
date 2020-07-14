@@ -111,7 +111,7 @@ int	get_next_line(int const fd, char **line)
 		index++;
 	}
 	// *line = ft_strdup(stack[fd]);
-	*line = ft_substr(stack[fd], 0, index);
+	*line = ft_substr(stack[fd], 0, index); // stack 中のはじめから index まで
 	tmp = ft_strdup(stack[fd] + index + 1); // index は nl が入っているから、その次から
 	return (1);
 }
@@ -122,14 +122,27 @@ int	get_next_line(int const fd, char **line)
 
 int		main(int argc, char **argv)
 {
-	char	*line;
 	int		fd;
 	int		tmp;
+	char	*line;
 
 	fd = open(argv[1], O_RDONLY);
 	tmp = get_next_line(fd, &line);
 	printf("%s\n", line);
-	free(line);
+	close(fd);
+
+	// char	*line;
+	// int		fd;
+	// int		tmp;
+
+	// fd = open(argv[1], O_RDONLY);
+	// tmp = get_next_line(fd, &line);
+	// printf("%s\n", line);
+	// free(line);
+	// close(fd);
+	// end
+
+
 	// if (argc == 2)
 	// {
 	// 	while ((tmp = get_next_line(fd, &line)) >= 0)
@@ -140,5 +153,4 @@ int		main(int argc, char **argv)
 	// 			break ;
 	// 	}
 	// }
-	close(fd);
 }
