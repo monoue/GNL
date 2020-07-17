@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 15:05:47 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/14 12:16:17 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/17 15:25:49 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 # include <stdio.h>
 # include <fcntl.h>
 
-# define MAX_FD 256
-# define END 0
-# define TRUE 1
-# define FALSE -1
-# define NOT_FOUND -1
+# define MAX_FD		256
+# define NOT_EOF	1
+# define FILE_END	0
+# define ERROR		-1
+# define NOT_FOUND	-1
 
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
