@@ -1,12 +1,14 @@
 #include "get_next_line.h"
 
-int	main(int ac, char **av)
+int	main(int argc, char **argv)
 {
 	int		fd[10];
 	char	*line;
 	int		ret;
 	int		len;
 
+	(void)argc;
+	(void)argv;
 	write(1, "\n", 1);
 
 	// fd[0] = open("lorem.txt", O_RDONLY);
