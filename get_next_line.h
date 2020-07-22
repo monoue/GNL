@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 15:05:47 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/17 15:25:49 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/22 10:40:01 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,12 @@
 # define FILE_END	0
 # define ERROR		-1
 # define NOT_FOUND	-1
+# define SAFE_FREE(ptr) {free(ptr);ptr = NULL;}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-char	*ft_strchr(const char *s, int c);
 int		get_next_line(int fd, char **line);
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strdup(const char *s1);
 
 #endif
