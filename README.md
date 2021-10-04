@@ -10,7 +10,7 @@ Standard library functions were recoded and modified for this project.
 ----
 ### Installation
 ```bash
-git clone https://github.com/unstoppa61e/gnl.git
+git clone https://github.com/unstoppa61e/get_next_line.git
 ```
 
 ### Example of usage 
